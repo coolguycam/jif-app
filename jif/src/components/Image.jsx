@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
-class Image extends React.Component {
+class Image extends Component {
 	render() {
 		return(
-			<li className="giphy__item"><img src={this.props.src} /></li>
+			<ul className="giphy__item"><img src={this.props.src} alt={this.props.alt} /></ul>
 		);
 	}
 }
+
+export default Image;

@@ -30,7 +30,7 @@ class InputKeyword extends Component {
 			<div className="giphy__input">
 				<input
 					type="text"
-					placeholder="Search gif..."
+					placeholder="russell..."
 					ref={(ref) => this.searchKeyword = ref}
 					onChange={this._debounce(this.handleChange, 800, false)}
 				/>
@@ -38,3 +38,5 @@ class InputKeyword extends Component {
 		)
 	}
 }
+
+export default InputKeyword;

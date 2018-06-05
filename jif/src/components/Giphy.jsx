@@ -1,14 +1,8 @@
-const GIPHY = {
-	base_url: "https://api.giphy.com/v1/gifs/",
-	query: ["search", "trending", "random", "translate"],
-	api_key: "dc6zaTOxFJmzC",
-	limit: 20,
-	offset: 0
-}
-let url = `${GIPHY.base_url}${GIPHY.query[0]}?api_key=${GIPHY.api_key}&limit=${GIPHY.limit}&offset=${GIPHY.offset}`;
-let firstInput = 'barakamon';
+import React, { Component } from "react";
+import ImageList from "./ImageList";
+import InputKeyword from "./InputKeyword";
 
-class Giphy extends React.Component {
+class Giphy extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -28,7 +22,8 @@ class Giphy extends React.Component {
 		xhr.setRequestHeader('Content-Type', 'application/json');
 		xhr.onload = function() {
 			if(xhr.status === 200) {
-				let response = JSON.parse(xhr.responseText).data;
+                let response = JSON.parse(xhr.responseText).data;
+                console.log(response);
 				self.setState({
 					data: response,
 					firstLoad: firstLoad
@@ -54,13 +49,4 @@ class Giphy extends React.Component {
 		);
 	}
 }
-
-const GIPHY = {
-	base_url: "https://api.giphy.com/v1/gifs/",
-	query: ["search", "trending", "random", "translate"],
-	api_key: "dc6zaTOxFJmzC",
-	limit: 20,
-	offset: 0
-}
-let url = `${GIPHY.base_url}${GIPHY.query[0]}?api_key=${GIPHY.api_key}&limit=${GIPHY.limit}&offset=${GIPHY.offset}`;
-let firstInput = 'barakamon';
+export default Giphy;
