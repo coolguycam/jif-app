@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Image from "./Image";
+import "./ImageList.css"
 
 
 class ImageList extends Component {
