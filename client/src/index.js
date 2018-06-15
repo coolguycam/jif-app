@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Media from "./pages/Media"
+import Media from "./pages/MediaGif"
 import registerServiceWorker from "./registerServiceWorker";
 import "./index.css";
 
